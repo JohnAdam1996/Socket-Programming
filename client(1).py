@@ -2,10 +2,9 @@ import socket
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-port = 12345                                 # Choose the port number your server is bound to
-host = '127.0.0.1'
+port = 2000                                 # Choose the port number your server is bound to
 
-sock.connect((host, port))           # Connects to given port number on the local machine
+sock.connect(('localhost', port))           # Connects to given port number on the local machine
 
 while True:
     cmd = input("")                         # Get command line input to send to server
